@@ -1,0 +1,17 @@
+{
+  "name": "hide-wa-extension",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun build src/content.ts --outdir dist --target browser && bun build src/popup.ts --outdir dist --target browser",
+    "watch": "bun build src/content.ts --outdir dist --target browser --watch & bun build src/popup.ts --outdir dist --target browser --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/chrome": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

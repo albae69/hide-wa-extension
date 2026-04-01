@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Hide WA Sidebar",
+  "description": "Blur the left sidebar on WhatsApp Web for privacy",
+  "version": "1.0.0",
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hide WA Sidebar"
+  }
+}
